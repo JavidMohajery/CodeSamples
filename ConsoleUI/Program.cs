@@ -27,7 +27,7 @@ namespace ConsoleUI
                 })
                 .UseSerilog()
                 .Build();
-
+            Log.Logger.Information("Application starting ... ");
             var svc = ActivatorUtilities.CreateInstance<GreetingService>(host.Services);
             svc.Run();
         }
